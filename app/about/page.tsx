@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import EditorialImageHero from "@/components/sections/EditorialImageHero";
 
 export const metadata: Metadata = {
@@ -95,7 +96,7 @@ export default function AboutPage() {
             className="button-interaction inline-flex w-fit items-center gap-5 border border-vela-silk/35 px-5 py-4 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors hover:border-vela-gold hover:text-vela-gold"
             href="/#contact"
           >
-            Review your requirements <span aria-hidden="true">↗</span>
+            Review your requirements <ArrowUpRight />
           </Link>
         </div>
       </section>

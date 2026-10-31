@@ -3,6 +3,7 @@
 import { useActionState, useRef } from "react";
 import Link from "next/link";
 import { submitContact, type ContactFormState } from "@/app/actions/contact";
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import { gsap, useGSAP } from "@/lib/gsap";
 
 const initialState: ContactFormState = {
@@ -134,7 +135,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Contact us on WhatsApp ↗
+              Contact us on WhatsApp <ArrowUpRight />
             </a>
             {!whatsappNumber && (
               <p className="max-w-sm text-xs leading-relaxed text-vela-taupe">
@@ -158,7 +159,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="button-interaction block px-4 py-3 font-mono text-[9px] uppercase tracking-[0.14em] text-vela-taupe hover:text-vela-obsidian"
             >
-              Google Business Profile · View map ↗
+              Google Business Profile · View map <ArrowUpRight />
             </a>
           </div>
         </div>
@@ -326,7 +327,7 @@ export default function Contact() {
               type="submit"
             >
               <span>{isPending ? "Sending securely…" : "Request a consultation"}</span>
-              <span aria-hidden="true">↗</span>
+              <ArrowUpRight />
             </button>
 
             <p

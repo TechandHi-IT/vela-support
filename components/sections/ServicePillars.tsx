@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import { gsap, useGSAP } from "@/lib/gsap";
 
 const services = [
@@ -153,7 +154,7 @@ export default function ServicePillars() {
                 className="button-interaction mt-8 inline-flex items-center gap-4 border-b border-vela-gold/60 pb-2 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors hover:border-vela-gold"
                 href="/#contact"
               >
-                Discuss your requirements <span aria-hidden="true">↗</span>
+                Discuss your requirements <ArrowUpRight />
               </Link>
             </div>
           </article>

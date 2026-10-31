@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import { gsap, useGSAP } from "@/lib/gsap";
 
 export default function Hero() {
@@ -114,7 +115,7 @@ export default function Hero() {
               className="button-interaction mt-7 inline-flex items-center gap-4 border-b border-vela-gold pb-2 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors hover:text-vela-gold sm:mt-9"
               href="/#contact"
             >
-              Review your time and priorities <span aria-hidden="true">↗</span>
+              Review your time and priorities <ArrowUpRight />
             </Link>
           </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import { gsap, useGSAP } from "@/lib/gsap";
 
 const reviews = [
@@ -93,8 +94,8 @@ export default function Testimonials() {
                 Visit profile
               </span>
             </span>
-            <span aria-hidden="true" className="ml-2 text-sm">
-              ↗
+            <span className="ml-2">
+              <ArrowUpRight />
             </span>
           </a>
         </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
@@ -19,13 +20,12 @@ export default function Footer() {
 
       media.add("(prefers-reduced-motion: no-preference)", () => {
         gsap.fromTo(
-          ".footer-word",
-          { yPercent: 110, rotate: 4 },
+          ".footer-logo",
+          { y: 20, autoAlpha: 0 },
           {
-            yPercent: 0,
-            rotate: 0,
+            y: 0,
+            autoAlpha: 1,
             duration: 1,
-            stagger: 0.12,
             ease: "power4.out",
             scrollTrigger: {
               trigger: footerRef.current,
@@ -49,18 +49,13 @@ export default function Footer() {
         <p className="mb-8 font-mono text-[9px] uppercase tracking-[0.18em] text-vela-taupe">
           Executive and lifestyle support, delivered with care and accountability.
         </p>
-        <div
-          aria-label="Vela Support"
-          className="flex overflow-hidden text-[clamp(3.2rem,14vw,13rem)] font-medium uppercase leading-[0.78] tracking-[-0.09em]"
-        >
-          <span className="footer-word inline-block">Vela</span>
-          <span
-            aria-hidden="true"
-            className="footer-word ml-[0.2em] inline-block text-vela-gold"
-          >
-            Support
-          </span>
-        </div>
+        <Image
+          src="/vela-logo.png"
+          alt="Vela Support UK"
+          width={560}
+          height={550}
+          className="footer-logo h-auto w-[min(68vw,320px)]"
+        />
 
         <div className="mt-12 flex flex-col justify-between gap-8 border-t border-vela-silk/20 pt-6 md:flex-row md:items-end">
           <div className="space-y-2 text-xs text-vela-taupe">

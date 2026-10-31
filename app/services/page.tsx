@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import EditorialImageHero from "@/components/sections/EditorialImageHero";
 import ServicePillars from "@/components/sections/ServicePillars";
 
@@ -91,7 +92,7 @@ export default function ServicesPage() {
           className="button-interaction mt-8 inline-flex items-center gap-5 bg-vela-obsidian px-6 py-4 font-mono text-[9px] uppercase tracking-[0.14em] text-vela-silk transition-colors hover:bg-vela-gold hover:text-vela-obsidian"
           href="/#contact"
         >
-          Request a consultation <span aria-hidden="true">↗</span>
+          Request a consultation <ArrowUpRight />
         </Link>
       </section>
     </main>

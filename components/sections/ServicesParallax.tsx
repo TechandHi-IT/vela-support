@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import { gsap, useGSAP } from "@/lib/gsap";
 
 const services = [
@@ -154,7 +155,7 @@ export default function ServicesParallax() {
                     aria-hidden="true"
                     className="absolute bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/70 text-white transition-colors group-hover:border-vela-gold group-hover:bg-vela-gold group-hover:text-vela-silk"
                   >
-                    ↗
+                    <ArrowUpRight />
                   </span>
                 </div>
                 <div className="flex items-start justify-between gap-6 p-5 sm:p-7">

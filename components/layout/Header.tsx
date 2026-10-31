@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 
 const navigationGroups = [
   {
@@ -71,11 +73,20 @@ export default function Header() {
       <div className="mx-auto flex min-h-[76px] max-w-[1600px] items-center justify-between gap-5 px-5 sm:px-8 lg:px-12">
         <Link
           href="/"
-          className="shrink-0 font-serif text-[1.65rem] tracking-[-0.06em] text-vela-obsidian"
+          className="flex shrink-0 items-center gap-2 font-serif text-[1.65rem] tracking-[-0.06em] text-vela-obsidian"
           aria-label="Vela Support home"
           onClick={closeNavigation}
         >
-          Vela Support<span className="text-vela-gold">.</span>
+          <Image
+            src="/vela-sail.png"
+            alt=""
+            width={42}
+            height={42}
+            priority
+          />
+          <span>
+            Vela Support<span className="text-vela-gold">.</span>
+          </span>
         </Link>
 
         <button
@@ -155,7 +166,7 @@ export default function Header() {
             href="/#contact"
             onClick={closeNavigation}
           >
-            Request a consultation <span aria-hidden="true">↗</span>
+            Request a consultation <ArrowUpRight />
           </Link>
         </nav>
       </div>
