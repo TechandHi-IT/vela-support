@@ -1,0 +1,81 @@
+@config "../tailwind.config.ts";
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --background: #F5F5F7;
+  --foreground: #0A0A0A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-vela-silk: #F5F5F7;
+  --color-vela-obsidian: #0A0A0A;
+  --color-vela-gold: #B8860B;
+  --color-vela-taupe: #8E8E93;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.nav-dropdown-panel {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease, visibility 160ms ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-panel,
+.nav-dropdown[open] .nav-dropdown-panel {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.button-interaction {
+  transition:
+    transform 160ms ease,
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .button-interaction:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.button-interaction:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-dropdown-panel {
+    transition: none;
+  }
+
+  .button-interaction {
+    transition: none;
+  }
+}
