@@ -19,10 +19,6 @@ export const metadata: Metadata = {
   title: "Vela Support | Executive & Lifestyle Support",
   description:
     "Vela Support provides executive and lifestyle assistance with clear responsibilities, considered capacity and professional delivery.",
-  icons: {
-    icon: "/vela-sail.png",
-    apple: "/vela-sail.png",
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

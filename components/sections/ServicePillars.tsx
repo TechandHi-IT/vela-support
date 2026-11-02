@@ -102,20 +102,20 @@ export default function ServicePillars() {
   return (
     <section
       ref={sectionRef}
-      className="bg-vela-silk px-6 py-20 text-vela-obsidian sm:px-10 sm:py-28 lg:px-16"
+      className="bg-vela-silk px-4 py-16 text-vela-obsidian sm:px-8 sm:py-24 lg:px-12 lg:py-28"
       aria-label="Our four service pillars"
     >
       <div className="mx-auto max-w-[1400px]">
         {services.map((service, index) => (
           <article
-            className={`service-pillar grid scroll-mt-24 items-center gap-8 border-t border-vela-taupe/35 py-10 md:grid-cols-2 md:gap-12 md:py-16 ${
+            className={`service-pillar grid scroll-mt-24 items-center gap-6 border-t border-vela-taupe/35 py-8 sm:gap-8 sm:py-10 md:grid-cols-2 md:gap-10 md:py-14 lg:gap-12 lg:py-16 ${
               index % 2 === 1 ? "service-pillar-reverse" : ""
             }`}
             id={service.id}
             key={service.id}
           >
             <div
-              className={`service-pillar-image-wrap relative h-[320px] overflow-hidden sm:h-[440px] ${
+              className={`service-pillar-image-wrap relative h-[min(72vw,320px)] min-h-[220px] overflow-hidden sm:h-[440px] ${
                 index % 2 === 1 ? "md:order-2" : ""
               }`}
             >
@@ -144,7 +144,7 @@ export default function ServicePillars() {
               <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.16em] text-vela-gold">
                 Service {service.number}
               </p>
-              <h2 className="max-w-xl font-serif text-4xl leading-[1.04] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
+              <h2 className="max-w-xl font-serif text-[clamp(2rem,8vw,3rem)] leading-[1.04] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
                 {service.title}
               </h2>
               <p className="mt-6 max-w-lg text-base leading-relaxed text-vela-taupe sm:text-lg">

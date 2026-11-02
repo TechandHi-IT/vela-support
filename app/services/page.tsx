@@ -28,7 +28,7 @@ export default function ServicesPage() {
         description="We map the operational work, define the scope and confirm capacity before taking responsibility for delivery."
       />
 
-      <section className="bg-[#f0e7e2] px-6 py-20 text-vela-obsidian sm:px-10 sm:py-28 lg:px-16">
+      <section className="bg-[#f0e7e2] px-4 py-16 text-vela-obsidian sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.7fr_1.3fr] md:items-end">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-vela-taupe">
             The Vela approach
@@ -54,13 +54,13 @@ export default function ServicesPage() {
 
       <section
         id="who-its-for"
-        className="scroll-mt-24 bg-[#f0e7e2] px-6 py-24 text-vela-obsidian sm:px-10 sm:py-36 lg:px-16"
+        className="scroll-mt-24 bg-[#f0e7e2] px-4 py-16 text-vela-obsidian sm:px-8 sm:py-28 lg:px-12 lg:py-36"
       >
         <div className="mx-auto max-w-6xl">
           <p className="mb-5 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-vela-taupe">
             A considered fit
           </p>
-          <h2 className="text-center font-serif text-5xl leading-[0.98] tracking-[-0.05em] sm:text-7xl">
+          <h2 className="text-center font-serif text-[clamp(2.5rem,10vw,3rem)] leading-[0.98] tracking-[-0.05em] sm:text-7xl">
             Who this service is for
           </h2>
           <ul className="mx-auto mt-12 max-w-4xl">
@@ -81,7 +81,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-vela-silk px-6 py-20 text-center text-vela-obsidian sm:px-10 sm:py-28">
+      <section className="bg-vela-silk px-4 py-16 text-center text-vela-obsidian sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-vela-gold">
           Discuss your requirements
         </p>
@@ -89,7 +89,7 @@ export default function ServicesPage() {
           Let&apos;s review your priorities and support requirements.
         </h2>
         <Link
-          className="button-interaction mt-8 inline-flex items-center gap-5 bg-vela-obsidian px-6 py-4 font-mono text-[9px] uppercase tracking-[0.14em] text-vela-silk transition-colors hover:bg-vela-gold hover:text-vela-obsidian"
+          className="button-interaction mt-8 inline-flex min-h-12 items-center gap-4 bg-vela-obsidian px-4 py-3 font-mono text-[9px] uppercase tracking-[0.12em] text-vela-silk transition-colors hover:bg-vela-gold hover:text-vela-obsidian sm:gap-5 sm:px-6 sm:py-4 sm:tracking-[0.14em]"
           href="/#contact"
         >
           Request a consultation <ArrowUpRight />

@@ -59,7 +59,7 @@ export default function EditorialImageHero({
   return (
     <section
       ref={heroRef}
-      className="relative isolate flex min-h-[min(760px,78svh)] items-end overflow-hidden bg-vela-obsidian text-vela-silk"
+      className="relative isolate flex min-h-[min(680px,74svh)] items-end overflow-hidden bg-vela-obsidian text-vela-silk sm:min-h-[min(760px,78svh)]"
       aria-label={eyebrow}
     >
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -82,12 +82,12 @@ export default function EditorialImageHero({
         />
       </div>
 
-      <div className="editorial-hero-copy mx-auto w-full max-w-[1600px] px-6 pb-12 pt-40 sm:px-10 sm:pb-16 lg:px-16 lg:pb-20">
-        <p className="mb-6 flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.2em] text-white/80 sm:text-[10px]">
+      <div className="editorial-hero-copy mx-auto w-full max-w-[1600px] px-4 pb-14 pt-32 sm:px-8 sm:pb-16 sm:pt-40 lg:px-12 lg:pb-20">
+        <p className="mb-5 flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.16em] text-white/80 sm:mb-6 sm:text-[10px] sm:tracking-[0.2em]">
           <span aria-hidden="true" className="h-px w-8 bg-vela-gold" />
           {eyebrow}
         </p>
-        <h1 className="max-w-5xl font-serif text-[clamp(3.2rem,8vw,8rem)] leading-[0.92] tracking-[-0.055em] text-white">
+        <h1 className="max-w-5xl text-balance font-serif text-[clamp(2.8rem,10vw,8rem)] leading-[0.94] tracking-[-0.055em] text-white">
           {title}
         </h1>
         {description && (
@@ -98,7 +98,7 @@ export default function EditorialImageHero({
       </div>
       <div
         aria-hidden="true"
-        className="absolute bottom-6 right-6 font-mono text-[9px] uppercase tracking-[0.16em] text-white/70 sm:right-10 lg:right-16"
+        className="absolute bottom-5 right-4 font-mono text-[8px] uppercase tracking-[0.12em] text-white/70 sm:bottom-6 sm:right-8 sm:text-[9px] sm:tracking-[0.16em] lg:right-12"
       >
         London · United Kingdom
       </div>

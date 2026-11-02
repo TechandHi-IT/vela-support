@@ -100,7 +100,7 @@ export default function ServicesParallax() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#eeedf0] px-6 py-28 text-vela-obsidian sm:px-10 sm:py-36 lg:px-16"
+      className="bg-[#eeedf0] px-4 py-16 text-vela-obsidian sm:px-8 sm:py-28 lg:px-12 lg:py-36"
       aria-labelledby="services-heading"
     >
       <div className="mx-auto max-w-[1500px]">
@@ -112,7 +112,7 @@ export default function ServicesParallax() {
             </p>
             <h2
               id="services-heading"
-              className="max-w-3xl text-5xl font-medium uppercase leading-[0.88] tracking-[-0.07em] sm:text-7xl"
+              className="max-w-3xl text-[clamp(2.5rem,10vw,3rem)] font-medium uppercase leading-[0.92] tracking-[-0.07em] sm:text-7xl"
             >
               Support for
               <br />
@@ -137,7 +137,7 @@ export default function ServicesParallax() {
               >
                 <div className="relative h-[260px] overflow-hidden sm:h-[340px]">
                   <Image
-                    className="service-image scale-[1.14] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.2]"
+                    className="service-image scale-[1.08] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.15]"
                     src={service.image}
                     alt={service.imageAlt}
                     fill
@@ -158,9 +158,9 @@ export default function ServicesParallax() {
                     <ArrowUpRight />
                   </span>
                 </div>
-                <div className="flex items-start justify-between gap-6 p-5 sm:p-7">
+                <div className="flex items-start justify-between gap-4 p-4 sm:gap-6 sm:p-7">
                   <div>
-                    <h3 className="max-w-md text-2xl font-medium leading-tight tracking-[-0.045em] sm:text-3xl">
+                    <h3 className="max-w-md text-xl font-medium leading-tight tracking-[-0.045em] sm:text-3xl">
                       {service.title}
                     </h3>
                     <p className="mt-3 max-w-md text-sm leading-relaxed text-vela-taupe sm:text-base">

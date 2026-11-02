@@ -56,7 +56,7 @@ export default function Testimonials() {
     <section
       id="testimonials"
       ref={sectionRef}
-      className="scroll-mt-24 overflow-hidden bg-[#eeedf0] px-6 py-24 text-vela-obsidian sm:px-10 sm:py-32 lg:px-16"
+      className="scroll-mt-24 overflow-hidden bg-[#eeedf0] px-4 py-16 text-vela-obsidian sm:px-8 sm:py-24 lg:px-12 lg:py-32"
       aria-labelledby="testimonials-heading"
     >
       <div className="mx-auto max-w-[1500px]">
@@ -68,7 +68,7 @@ export default function Testimonials() {
             </p>
             <h2
               id="testimonials-heading"
-              className="text-5xl font-medium uppercase leading-[0.9] tracking-[-0.07em] sm:text-7xl"
+              className="text-[clamp(2.5rem,10vw,3rem)] font-medium uppercase leading-[0.92] tracking-[-0.07em] sm:text-7xl"
             >
               Reviews
               <br />
@@ -79,7 +79,7 @@ export default function Testimonials() {
             href="https://www.trustpilot.com/review/velasupport.co.uk"
             target="_blank"
             rel="noopener noreferrer"
-            className="button-interaction inline-flex min-h-12 w-fit items-center gap-3 border border-vela-taupe/40 bg-vela-silk px-4 py-3 transition-colors hover:border-vela-gold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-vela-gold"
+            className="button-interaction inline-flex min-h-12 w-fit items-center gap-3 border border-vela-taupe/40 bg-vela-silk px-3 py-3 transition-colors hover:border-vela-gold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-vela-gold sm:px-4"
             aria-label="Visit Vela Support on Trustpilot"
           >
             <span
@@ -112,7 +112,7 @@ export default function Testimonials() {
         <div className="grid gap-4 md:grid-cols-3 md:gap-6">
           {reviews.map((review, index) => (
             <article
-              className="review-card flex min-h-[260px] flex-col border border-vela-taupe/30 bg-vela-silk p-6 transition-shadow duration-300 hover:shadow-[0_12px_30px_rgba(10,10,10,0.07)] sm:min-h-[290px] sm:p-8"
+              className="review-card flex min-h-[240px] flex-col border border-vela-taupe/30 bg-vela-silk p-4 transition-shadow duration-300 hover:shadow-[0_12px_30px_rgba(10,10,10,0.07)] sm:min-h-[290px] sm:p-8"
               key={review.clientType}
             >
               <div

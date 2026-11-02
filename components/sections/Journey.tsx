@@ -75,10 +75,10 @@ export default function Journey() {
     <section
       id="journey"
       ref={sectionRef}
-      className="bg-vela-silk px-6 py-28 text-vela-obsidian sm:px-10 sm:py-40 lg:px-16"
+      className="bg-vela-silk px-4 py-16 text-vela-obsidian sm:px-8 sm:py-28 lg:px-12 lg:py-40"
       aria-labelledby="journey-heading"
     >
-      <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+      <div className="mx-auto grid max-w-[1500px] gap-10 sm:gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
         <div className="lg:sticky lg:top-24 lg:h-fit">
           <p className="mb-5 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-vela-taupe sm:text-xs">
             <span aria-hidden="true" className="h-px w-8 bg-vela-gold" />
@@ -86,7 +86,7 @@ export default function Journey() {
           </p>
           <h2
             id="journey-heading"
-            className="max-w-xl text-5xl font-medium uppercase leading-[0.88] tracking-[-0.07em] sm:text-7xl"
+            className="max-w-xl text-[clamp(2.5rem,10vw,3rem)] font-medium uppercase leading-[0.92] tracking-[-0.07em] sm:text-7xl"
           >
             What happens
             <br />
@@ -110,7 +110,7 @@ export default function Journey() {
           <ol className="relative">
             {steps.map((step) => (
               <li
-                className="relative grid min-h-[220px] grid-cols-[40px_1fr] gap-6 border-b border-vela-taupe/35 py-8 first:pt-0 last:min-h-0 last:border-0 last:pb-0 sm:min-h-[250px] sm:gap-8"
+                className="relative grid min-h-[200px] grid-cols-[40px_minmax(0,1fr)] gap-4 border-b border-vela-taupe/35 py-7 first:pt-0 last:min-h-0 last:border-0 last:pb-0 sm:min-h-[250px] sm:grid-cols-[40px_1fr] sm:gap-8 sm:py-8"
                 key={step.number}
               >
                 <span
@@ -123,7 +123,7 @@ export default function Journey() {
                   <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-vela-taupe">
                     Step {step.number}
                   </p>
-                  <h3 className="mt-3 text-3xl font-medium tracking-[-0.055em] sm:text-5xl">
+                  <h3                   className="mt-3 text-2xl font-medium tracking-[-0.055em] sm:text-5xl">
                     {step.title}
                   </h3>
                   <p className="mt-4 max-w-md text-sm leading-relaxed text-vela-taupe sm:text-base">

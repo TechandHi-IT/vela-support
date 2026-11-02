@@ -21,14 +21,14 @@ export default function AboutPage() {
 
       <section
         id="capacity"
-        className="scroll-mt-24 bg-[#f0e7e2] px-6 py-24 text-vela-obsidian sm:px-10 sm:py-36 lg:px-16"
+        className="scroll-mt-24 bg-[#f0e7e2] px-4 py-16 text-vela-obsidian sm:px-8 sm:py-28 lg:px-12 lg:py-36"
       >
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.65fr_1.35fr] md:gap-20">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-vela-taupe">
             Capacity and continuity
           </p>
           <div>
-            <h2 className="font-serif text-5xl leading-[0.98] tracking-[-0.05em] sm:text-7xl">
+            <h2 className="font-serif text-[clamp(2.5rem,10vw,3rem)] leading-[0.98] tracking-[-0.05em] sm:text-7xl">
               Deliberate capacity.
               <br />
               Consistent service.
@@ -52,7 +52,7 @@ export default function AboutPage() {
 
       <section
         id="founder"
-        className="scroll-mt-24 bg-vela-silk px-6 py-24 text-vela-obsidian sm:px-10 sm:py-36 lg:px-16"
+        className="scroll-mt-24 bg-vela-silk px-4 py-16 text-vela-obsidian sm:px-8 sm:py-28 lg:px-12 lg:py-36"
       >
         <div className="mx-auto max-w-4xl">
           <div className="flex flex-col justify-center py-4 lg:py-10">
@@ -60,7 +60,7 @@ export default function AboutPage() {
               <span aria-hidden="true" className="h-px w-8 bg-vela-gold" />
               How the work is delivered
             </p>
-            <h2 className="font-serif text-5xl leading-[0.98] tracking-[-0.05em] sm:text-7xl">
+            <h2 className="font-serif text-[clamp(2.5rem,10vw,3rem)] leading-[0.98] tracking-[-0.05em] sm:text-7xl">
               Elevating
               <br />
               every detail<span className="text-vela-gold">.</span>
@@ -82,7 +82,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#0A0A0A] px-6 py-20 text-vela-silk sm:px-10 sm:py-28 lg:px-16">
+      <section className="bg-[#0A0A0A] px-4 py-16 text-vela-silk sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
             <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.18em] text-vela-gold">
@@ -93,7 +93,7 @@ export default function AboutPage() {
             </h2>
           </div>
           <Link
-            className="button-interaction inline-flex w-fit items-center gap-5 border border-vela-silk/35 px-5 py-4 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors hover:border-vela-gold hover:text-vela-gold"
+            className="button-interaction inline-flex min-h-12 w-fit items-center gap-4 border border-vela-silk/35 px-4 py-3 font-mono text-[9px] uppercase tracking-[0.12em] transition-colors hover:border-vela-gold hover:text-vela-gold sm:gap-5 sm:px-5 sm:py-4 sm:tracking-[0.14em]"
             href="/#contact"
           >
             Review your requirements <ArrowUpRight />

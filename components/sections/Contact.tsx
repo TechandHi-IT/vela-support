@@ -76,14 +76,14 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="scroll-mt-24 relative overflow-hidden bg-vela-silk px-6 py-28 text-vela-obsidian sm:px-10 sm:py-36 lg:px-16"
+      className="scroll-mt-24 relative overflow-hidden bg-vela-silk px-4 py-16 text-vela-obsidian sm:px-8 sm:py-28 lg:px-12 lg:py-36"
       aria-labelledby="contact-heading"
     >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-36 top-12 h-96 w-96 rounded-full bg-[radial-gradient(circle,rgba(184,134,11,0.12),transparent_68%)]"
       />
-      <div className="relative mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+      <div className="relative mx-auto grid max-w-[1500px] gap-10 sm:gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div className="lg:sticky lg:top-16 lg:h-fit">
           <p className="mb-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-vela-taupe sm:text-xs">
             <span aria-hidden="true" className="h-px w-8 bg-vela-gold" />
@@ -91,7 +91,7 @@ export default function Contact() {
           </p>
           <h2
             id="contact-heading"
-            className="text-[clamp(2.8rem,6.8vw,6.5rem)] font-medium uppercase leading-[0.86] tracking-[-0.075em]"
+            className="text-balance text-[clamp(2.35rem,10vw,6.5rem)] font-medium uppercase leading-[0.9] tracking-[-0.075em]"
           >
             <span className="block overflow-hidden">
               <span className="contact-heading-line block">
@@ -124,13 +124,13 @@ export default function Contact() {
 
           <div className="mt-10 space-y-5 border-t border-vela-taupe/40 pt-6">
             <a
-              className="button-interaction block w-fit text-sm underline decoration-vela-gold/60 underline-offset-4 hover:decoration-vela-gold"
+              className="button-interaction block w-fit break-all text-sm underline decoration-vela-gold/60 underline-offset-4 hover:decoration-vela-gold"
               href="mailto:info@velasupport.co.uk"
             >
               info@velasupport.co.uk
             </a>
             <a
-              className="button-interaction block w-fit text-sm underline decoration-vela-gold/60 underline-offset-4 hover:decoration-vela-gold"
+              className="button-interaction inline-flex min-h-11 items-center gap-2 text-sm underline decoration-vela-gold/60 underline-offset-4 hover:decoration-vela-gold"
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -145,7 +145,7 @@ export default function Contact() {
             )}
           </div>
 
-          <div className="mt-10 overflow-hidden border border-vela-taupe/35 bg-[#eeedf0]">
+          <div className="mt-8 overflow-hidden border border-vela-taupe/35 bg-[#eeedf0] sm:mt-10">
             <iframe
               title="Google Maps search for Vela Support UK"
               src="https://maps.google.com/maps?q=Vela%20Support%20UK&t=&z=12&ie=UTF8&iwloc=&output=embed"
@@ -164,7 +164,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="contact-form-panel border border-vela-taupe/35 bg-white/70 p-6 sm:p-10">
+        <div className="contact-form-panel min-w-0 border border-vela-taupe/35 bg-white/70 p-4 sm:p-8 lg:p-10">
           <div className="mb-8">
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-vela-gold">
               Confidential Consultation Form
@@ -189,7 +189,7 @@ export default function Contact() {
               />
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
               <div>
                 <label
                   className="mb-2 block font-mono text-[9px] uppercase tracking-[0.14em]"
@@ -199,7 +199,7 @@ export default function Contact() {
                 </label>
                 <input
                   autoComplete="name"
-                  className="w-full border border-vela-taupe/40 bg-transparent px-3 py-3 text-sm outline-none transition-colors focus:border-vela-gold"
+                  className="min-h-12 w-full border border-vela-taupe/40 bg-transparent px-3 py-3 text-base outline-none transition-colors focus:border-vela-gold sm:text-sm"
                   id="fullName"
                   maxLength={120}
                   name="fullName"
@@ -221,7 +221,7 @@ export default function Contact() {
                 </label>
                 <input
                   autoComplete="email"
-                  className="w-full border border-vela-taupe/40 bg-transparent px-3 py-3 text-sm outline-none transition-colors focus:border-vela-gold"
+                  className="min-h-12 w-full border border-vela-taupe/40 bg-transparent px-3 py-3 text-base outline-none transition-colors focus:border-vela-gold sm:text-sm"
                   id="email"
                   maxLength={254}
                   name="email"
@@ -244,7 +244,7 @@ export default function Contact() {
                 </label>
                 <input
                   autoComplete="tel"
-                  className="w-full border border-vela-taupe/40 bg-transparent px-3 py-3 text-sm outline-none transition-colors focus:border-vela-gold"
+                  className="min-h-12 w-full border border-vela-taupe/40 bg-transparent px-3 py-3 text-base outline-none transition-colors focus:border-vela-gold sm:text-sm"
                   id="phone"
                   maxLength={40}
                   name="phone"
@@ -265,22 +265,39 @@ export default function Contact() {
                 >
                   Service type
                 </label>
-                <select
-                  className="w-full border border-vela-taupe/40 bg-vela-silk px-3 py-3 text-sm outline-none transition-colors focus:border-vela-gold"
-                  id="serviceType"
-                  name="serviceType"
-                  required
-                  defaultValue=""
-                >
-                  <option disabled value="">
-                    Select a service
-                  </option>
-                  {services.map((service) => (
-                    <option key={service} value={service}>
-                      {service}
+                <div className="relative">
+                  <select
+                    className="service-select min-h-12 w-full appearance-none border border-vela-taupe/40 bg-vela-silk px-3 py-3 pr-10 text-base outline-none transition-colors focus:border-vela-gold sm:text-sm"
+                    id="serviceType"
+                    name="serviceType"
+                    required
+                    defaultValue=""
+                  >
+                    <option disabled value="">
+                      Select a service
                     </option>
-                  ))}
-                </select>
+                    {services.map((service) => (
+                      <option key={service} value={service}>
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                  <svg
+                    aria-hidden="true"
+                    className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m4 6 4 4 4-4"
+                      stroke="#0A0A0A"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                </div>
                 {fieldError("serviceType") && (
                   <p className="mt-1 text-xs text-red-700">
                     {fieldError("serviceType")}
@@ -297,7 +314,7 @@ export default function Contact() {
                 Requirements and priorities
               </label>
               <textarea
-                className="min-h-36 w-full resize-y border border-vela-taupe/40 bg-transparent px-3 py-3 text-sm outline-none transition-colors focus:border-vela-gold"
+                className="min-h-36 w-full resize-y border border-vela-taupe/40 bg-transparent px-3 py-3 text-base outline-none transition-colors focus:border-vela-gold sm:text-sm"
                 id="requirements"
                 maxLength={5000}
                 name="requirements"

@@ -74,7 +74,7 @@ export default function FounderNote() {
   return (
     <section
       ref={sectionRef}
-      className="bg-vela-silk px-6 py-24 text-vela-obsidian sm:px-10 sm:py-36 lg:px-16"
+      className="bg-vela-silk px-4 py-16 text-vela-obsidian sm:px-8 sm:py-24 lg:px-12 lg:py-36"
       aria-labelledby="founder-heading"
     >
       <div className="mx-auto max-w-[1400px]">
@@ -86,7 +86,7 @@ export default function FounderNote() {
             </p>
             <h2
               id="founder-heading"
-              className="max-w-xl font-serif text-5xl leading-[0.93] tracking-[-0.06em] sm:text-7xl"
+              className="max-w-xl font-serif text-[clamp(2.5rem,10vw,3rem)] leading-[0.96] tracking-[-0.06em] sm:text-7xl"
             >
               Deliberate capacity.
               <br />
@@ -108,10 +108,10 @@ export default function FounderNote() {
           </div>
         </div>
 
-        <div className="principle-list mt-16 grid border-t border-vela-taupe/35 md:grid-cols-3">
+        <div className="principle-list mt-12 grid border-t border-vela-taupe/35 sm:mt-16 md:grid-cols-3">
           {operatingPrinciples.map((principle) => (
             <article
-              className="principle-row border-b border-vela-taupe/35 py-6 md:border-b-0 md:border-r md:px-6 md:py-8 md:first:pl-0 md:last:border-r-0"
+              className="principle-row border-b border-vela-taupe/35 py-5 md:border-b-0 md:border-r md:px-4 md:py-8 md:first:pl-0 md:last:border-r-0 lg:px-6"
               key={principle.number}
             >
               <p className="font-mono text-[10px] tracking-[0.14em] text-vela-gold">

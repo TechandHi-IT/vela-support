@@ -60,6 +60,12 @@ body {
     border-color 200ms ease;
 }
 
+.service-select {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .button-interaction:hover {
     transform: translateY(-1px);

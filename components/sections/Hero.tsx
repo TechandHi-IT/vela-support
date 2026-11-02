@@ -65,7 +65,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="scroll-mt-24 relative overflow-hidden bg-vela-silk px-6 pb-12 text-vela-obsidian sm:px-10 sm:pb-16 lg:px-16"
+      className="scroll-mt-24 relative overflow-hidden bg-vela-silk px-4 pb-10 text-vela-obsidian sm:px-8 sm:pb-16 lg:px-12"
       aria-labelledby="hero-title"
     >
       <div
@@ -74,16 +74,16 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-[1500px]">
-        <div className="flex items-center justify-between border-b border-vela-obsidian/15 py-4">
-          <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-vela-taupe sm:text-[10px]">
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-vela-obsidian/15 py-4">
+          <p className="font-mono text-[8px] uppercase tracking-[0.12em] text-vela-taupe sm:text-[10px] sm:tracking-[0.16em]">
             Executive and lifestyle support
           </p>
-          <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-vela-taupe sm:text-[10px]">
+          <p className="font-mono text-[8px] uppercase tracking-[0.12em] text-vela-taupe sm:text-[10px] sm:tracking-[0.16em]">
             United Kingdom
           </p>
         </div>
 
-        <div className="grid items-center gap-10 py-12 sm:py-16 lg:min-h-[min(720px,78svh)] lg:grid-cols-[1.05fr_0.85fr] lg:gap-16 lg:py-10">
+        <div className="grid items-center gap-8 py-10 sm:gap-10 sm:py-16 lg:min-h-[min(720px,78svh)] lg:grid-cols-[1.05fr_0.85fr] lg:gap-16 lg:py-10">
           <div className="hero-copy">
             <p className="hero-kicker mb-6 flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.18em] text-vela-gold sm:mb-8 sm:text-[10px]">
               <span aria-hidden="true" className="h-px w-8 bg-vela-gold" />
@@ -92,7 +92,7 @@ export default function Hero() {
 
             <h1
               id="hero-title"
-              className="max-w-3xl font-sans text-[clamp(3.4rem,7vw,6.8rem)] font-medium uppercase leading-[0.88] tracking-[-0.08em]"
+              className="max-w-3xl font-sans text-[clamp(3rem,10vw,6.8rem)] font-medium uppercase leading-[0.88] tracking-[-0.08em]"
             >
               <span className="sr-only">Time is money. We protect both.</span>
               <span aria-hidden="true" className="block">
@@ -119,7 +119,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <figure className="hero-image-frame relative mx-auto h-[min(48svh,480px)] min-h-[300px] w-full max-w-[560px] overflow-hidden bg-[#e6ded5] lg:ml-auto lg:h-[min(68svh,620px)]">
+          <figure className="hero-image-frame relative mx-auto h-[min(75vw,420px)] min-h-[260px] w-full max-w-[560px] overflow-hidden bg-[#e6ded5] sm:h-[min(58svh,480px)] lg:ml-auto lg:h-[min(68svh,620px)]">
             <Image
               className="hero-image object-cover"
               src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=90"

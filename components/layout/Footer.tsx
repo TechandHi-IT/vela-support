@@ -1,9 +1,4 @@
-"use client";
-
-import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
-import { gsap, useGSAP } from "@/lib/gsap";
 
 const legalLinks = [
   { href: "/privacy-policy", label: "GDPR Privacy Policy" },
@@ -12,52 +7,14 @@ const legalLinks = [
 ];
 
 export default function Footer() {
-  const footerRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const media = gsap.matchMedia();
-
-      media.add("(prefers-reduced-motion: no-preference)", () => {
-        gsap.fromTo(
-          ".footer-logo",
-          { y: 20, autoAlpha: 0 },
-          {
-            y: 0,
-            autoAlpha: 1,
-            duration: 1,
-            ease: "power4.out",
-            scrollTrigger: {
-              trigger: footerRef.current,
-              start: "top 92%",
-            },
-          },
-        );
-      });
-
-      return () => media.revert();
-    },
-    { scope: footerRef },
-  );
-
   return (
-    <footer
-      ref={footerRef}
-      className="overflow-hidden bg-vela-obsidian px-6 pb-7 pt-14 text-vela-silk sm:px-10 sm:pt-20 lg:px-16"
-    >
+    <footer className="overflow-hidden bg-vela-obsidian px-4 pb-7 pt-12 text-vela-silk sm:px-8 sm:pt-16 lg:px-12 lg:pt-20">
       <div className="mx-auto max-w-[1500px]">
-        <p className="mb-8 font-mono text-[9px] uppercase tracking-[0.18em] text-vela-taupe">
+        <p className="mb-8 max-w-2xl font-mono text-[9px] uppercase leading-relaxed tracking-[0.16em] text-vela-taupe sm:text-[10px] sm:tracking-[0.18em]">
           Executive and lifestyle support, delivered with care and accountability.
         </p>
-        <Image
-          src="/vela-logo.png"
-          alt="Vela Support UK"
-          width={560}
-          height={550}
-          className="footer-logo h-auto w-[min(68vw,320px)]"
-        />
 
-        <div className="mt-12 flex flex-col justify-between gap-8 border-t border-vela-silk/20 pt-6 md:flex-row md:items-end">
+        <div className="mt-8 flex flex-col justify-between gap-8 border-t border-vela-silk/20 pt-6 md:mt-12 md:flex-row md:items-end">
           <div className="space-y-2 text-xs text-vela-taupe">
             <p>Review priorities, agree the scope and coordinate the details.</p>
             <a className="hover:text-vela-silk" href="mailto:info@velasupport.co.uk">
