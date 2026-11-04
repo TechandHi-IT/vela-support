@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import { gsap, useGSAP } from "@/lib/gsap";
 
 const services = [
@@ -130,45 +129,40 @@ export default function ServicesParallax() {
               className="service-card group relative min-w-0 overflow-hidden bg-vela-silk"
               key={service.number}
             >
-              <Link
-                href="/#contact"
-                className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-vela-gold"
-                aria-label={`Discuss ${service.title}`}
-              >
-                <div className="relative h-[260px] overflow-hidden sm:h-[340px]">
-                  <Image
-                    className="service-image scale-[1.08] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.15]"
-                    src={service.image}
-                    alt={service.imageAlt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    unoptimized
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-t from-neutral-950/55 via-transparent to-transparent"
-                  />
-                  <span className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-vela-gold font-mono text-xs text-vela-silk">
-                    {service.number}
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="absolute bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/70 text-white transition-colors group-hover:border-vela-gold group-hover:bg-vela-gold group-hover:text-vela-silk"
-                  >
-                    <ArrowUpRight />
-                  </span>
+              <div className="relative h-[260px] overflow-hidden sm:h-[340px]">
+                <Image
+                  className="service-image scale-[1.08] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.15]"
+                  src={service.image}
+                  alt={service.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-gradient-to-t from-neutral-950/55 via-transparent to-transparent"
+                />
+                <span className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-vela-gold font-mono text-xs text-vela-silk">
+                  {service.number}
+                </span>
+                <Link
+                  href="/#contact"
+                  className="button-interaction absolute bottom-5 right-5 inline-flex min-h-11 items-center justify-center rounded-full bg-vela-silk px-4 font-mono text-[9px] uppercase tracking-[0.12em] text-vela-obsidian transition-colors hover:bg-vela-gold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-vela-gold"
+                  aria-label={`Discuss ${service.title}`}
+                >
+                  Discuss this service
+                </Link>
+              </div>
+              <div className="flex items-start justify-between gap-4 p-4 sm:gap-6 sm:p-7">
+                <div>
+                  <h3 className="max-w-md text-xl font-medium leading-tight tracking-[-0.045em] sm:text-3xl">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 max-w-md text-sm leading-relaxed text-vela-taupe sm:text-base">
+                    {service.description}
+                  </p>
                 </div>
-                <div className="flex items-start justify-between gap-4 p-4 sm:gap-6 sm:p-7">
-                  <div>
-                    <h3 className="max-w-md text-xl font-medium leading-tight tracking-[-0.045em] sm:text-3xl">
-                      {service.title}
-                    </h3>
-                    <p className="mt-3 max-w-md text-sm leading-relaxed text-vela-taupe sm:text-base">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
+              </div>
             </article>
           ))}
         </div>
